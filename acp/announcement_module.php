@@ -58,7 +58,7 @@ class announcement_module
 		$this->user = $user;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $phpEx;
-		
+
 		// Add the announcements ACP lang file
 		$this->user->add_lang_ext('forumhulp/announcement', 'announcement_acp');
 
