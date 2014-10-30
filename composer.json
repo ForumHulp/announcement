@@ -1,0 +1,35 @@
+{
+	"name": "forumhulp/announcement",
+	"type": "phpbb-extension",
+	"description": "An extension which allows you to create board-wide announcements for your phpBB forum",
+	"homepage": "https://forumhulp.com",
+	"version": "1.0.0",
+	"keywords": ["phpbb", "extension", "announcements"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "John Peskens",
+			"email": "info@forumhulp.com",
+			"homepage": "http://forumhulp.com",
+			"role": "Extensions Team Consultant"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Announcement",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		},
+		"version-check": {
+			"host": "forumhulp.com",
+			"directory": "/ext",
+			"filename": "index.php?id=39"
+		}
+	}
+}

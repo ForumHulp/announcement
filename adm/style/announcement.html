@@ -1,0 +1,66 @@
+<!-- INCLUDE overall_header.html -->
+
+<script>
+	var form_name = 'acp_announcement';
+	var text_name = 'announcement_text';
+	var load_draft = false;
+	var upload = false;
+	var imageTag = false;
+</script>
+
+<a id="maincontent"></a>
+
+<h1>{L_ANNOUNCEMENT_SETTINGS}</h1>
+
+<p>{L_ANNOUNCEMENT_SETTINGS_EXPLAIN}</p>
+
+<!-- IF ERRORS -->
+	<div class="errorbox">
+		<h3>{L_WARNING}</h3>
+		<p>{ERRORS}</p>
+	</div>
+<!-- ENDIF -->
+
+<form id="acp_announcement" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_GENERAL_OPTIONS}</legend>
+		<dl>
+			<dt><label for="announcement_enable">{L_ANNOUNCEMENT_ENABLE}{L_COLON}</label></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="announcement_enable" name="announcement_enable" value="1"<!-- IF ANNOUNCEMENT_ENABLED --> checked="checked"<!-- ENDIF --> /> {L_ENABLED}</label>
+				<label><input type="radio" class="radio" name="announcement_enable" value="0"<!-- IF not ANNOUNCEMENT_ENABLED --> checked="checked"<!-- ENDIF --> /> {L_DISABLED}</label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_ANNOUNCEMENT_TEXT}</legend>
+
+		<dl>
+			<dt><label for="announcement_enable">{L_ANNOUNCEMENT_GUESTS}{L_COLON}</label></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="announcement_guests" name="announcement_guests" value="1"<!-- IF ANNOUNCEMENT_GUESTS --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="announcement_guests" value="0"<!-- IF not ANNOUNCEMENT_GUESTS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			<span style="float:right;">{ANNOUNCEMENT_TIME}</span>
+			</dd>
+		</dl>
+
+		<br />
+		<!-- INCLUDEJS @forumhulp_announcement/tiny_mce/tinymce.min.js -->
+		<p>{L_WYSIWYG_TEXT}</p>
+		<dl class="responsive-columns">
+			<dt style="width: 0;"></dt>
+			<dd style="margin-{S_CONTENT_FLOW_BEGIN}: -5px;border-color:#fff;">
+				<textarea  class="mceEditor" name="announcement_text" rows="25" cols="60" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{ANNOUNCEMENT_TEXT}</textarea>
+			</dd>
+		</dl>
+		<!-- INCLUDEJS @forumhulp_announcement/tiny_mce/scripts.js -->
+	</fieldset>
+
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

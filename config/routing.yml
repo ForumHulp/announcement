@@ -1,0 +1,3 @@
+forumhulp_announcement_controller:
+    pattern: /announcement/close
+    defaults: { _controller: forumhulp.announcement.controller:close_announcement }
