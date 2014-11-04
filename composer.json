@@ -8,10 +8,36 @@
 	"license": "GPL-2.0",
 	"authors": [
 		{
+ 			"name": "Marc Alexander", 
+ 			"email": "admin@m-a-styles.de", 
+ 			"homepage": "http://www.m-a-styles.de", 
+ 			"role": "Extensions Team Consultant" 
+ 		}, 
+ 		{ 
+ 			"name": "Michael Cullum", 
+ 			"homepage": "http://michaelcullum.com", 
+ 			"email": "michael@phpbb.com", 
+ 			"role": "Extensions Team Consultant" 
+ 		}, 
+ 		{ 
+ 			"name": "Matt Friedman", 
+ 			"homepage": "http://mattfriedman.me", 
+ 			"role": "Extensions Development Team Lead" 
+ 		}, 
+ 		{ 
+ 			"name": "Nathan Guse", 
+ 			"email": "nathaniel.guse@gmail.com", 
+ 			"role": "Former Extensions Development Team Lead" 
+ 		}, 
+ 		{ 
+ 			"name": "Lukasz Kaczynski", 
+ 			"role": "Extensions Development Team" 
+ 		},
+		{
 			"name": "John Peskens",
 			"email": "info@forumhulp.com",
 			"homepage": "http://forumhulp.com",
-			"role": "Extensions Team Consultant"
+			"role": "Extensions Development Team"
 		}
 	],
 	"require": {
